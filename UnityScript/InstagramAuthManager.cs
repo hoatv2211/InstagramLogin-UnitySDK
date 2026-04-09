@@ -16,7 +16,7 @@ public class InstagramAuthManager : MonoBehaviour
     public static InstagramAuthManager Instance { get; private set; }
 
     [Header("Server Config")]
-    [SerializeField] private string serverUrl = "https://shasta-interpenetrant-nonabstemiously.ngrok-free.dev";
+    [SerializeField] private string serverUrl = "https://instagram-login-unity-sdk.vercel.app";
 
     [Header("Callback Mode")]
     [SerializeField] private CallbackMode callbackMode = CallbackMode.Polling;

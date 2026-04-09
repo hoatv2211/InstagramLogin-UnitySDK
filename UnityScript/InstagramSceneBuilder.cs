@@ -2,6 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using TMPro;
 
 /// <summary>
@@ -17,6 +18,15 @@ public static class InstagramSceneBuilder
             "Build Instagram Scene",
             "Tạo mới toàn bộ Instagram UI trong scene hiện tại?\n(Không xóa objects có sẵn)",
             "Tạo", "Hủy")) return;
+
+        // ── EventSystem ──────────────────────────────────────────
+        if (Object.FindObjectOfType<EventSystem>() == null)
+        {
+            var eventSystem = new GameObject("EventSystem");
+            eventSystem.AddComponent<EventSystem>();
+            eventSystem.AddComponent<StandaloneInputModule>();
+            Undo.RegisterCreatedObjectUndo(eventSystem, "Create EventSystem");
+        }
 
         // ── Managers ─────────────────────────────────────────────
         var authGO = CreateGO("InstagramAuthManager");

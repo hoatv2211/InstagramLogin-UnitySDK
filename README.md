@@ -257,8 +257,14 @@ App in **Development** mode only allows added accounts: / App ở chế độ De
 
 ## Unity Setup / Cài đặt Unity
 
-### Step 1: Copy files / Bước 1: Copy files
+### Step 1: Import Package / Bước 1: Import Package
 
+**Option A (Recommended):**  
+Download and import `instagramlogin.unitypackage` from the repository into your Unity project (`Assets -> Import Package -> Custom Package...`).  
+Tải và import file `instagramlogin.unitypackage` vào thư mục dự án Unity của bạn.
+
+**Option B (Manual copy):**  
+Copy the `UnityScript/` folder directly into your `Assets/` directory. / Copy trực tiếp thư mục `UnityScript/` vào `Assets/`:
 ```
 Assets/
 ├── Scripts/
@@ -402,6 +408,10 @@ public class InstagramUser {
 **CORS error (WebGL)**  
 → Add WebGL build origin to `ALLOWED_ORIGINS` in `.env`  
 → Thêm origin WebGL build vào `ALLOWED_ORIGINS` trong `.env`
+
+**DNS_PROBE_FINISHED_NXDOMAIN ("%20" error in URL)**  
+→ You have a trailing space at the end of the `serverUrl` field in Unity Inspector. Remove it.  
+→ Bạn copy/paste bị dư một khoảng trắng (dấu cách) ở cuối chuỗi `Server Url` trong Unity. Xóa khoảng trắng này đi.
 
 ---
 

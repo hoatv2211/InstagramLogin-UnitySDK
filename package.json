@@ -1,0 +1,33 @@
+{
+  "name": "instagram-oauth-unity-sdk",
+  "version": "1.0.0",
+  "description": "Instagram OAuth Server for Unity (Mobile, WebGL, Desktop)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "python test_server.py --url http://localhost:3000 --no-browser"
+  },
+  "keywords": [
+    "instagram",
+    "oauth",
+    "unity",
+    "sdk"
+  ],
+  "author": "hoatv2211",
+  "license": "MIT",
+  "homepage": "https://github.com/hoatv2211/InstagramLogin-UnitySDK",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoatv2211/InstagramLogin-UnitySDK.git"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.37.0",
+    "axios": "^1.15.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "jsonwebtoken": "^9.0.3",
+    "ws": "^8.20.0"
+  }
+}
